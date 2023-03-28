@@ -43,26 +43,16 @@ public class Gryffindor extends Hogwards {
         return sum;
     }
 
-    @Override
-    public void printStudents() {
-        for (int i = 0; i <= 2; i++) {
-            System.out.println(person[i]);
-        }
-    }
 
-    @Override
-    public void compareStudents() {
-        System.out.println(person[0].getFio() + " имеет очков " + person[0].sumPoints());
-        System.out.println(person[1].getFio() + " имеет очков " + person[1].sumPoints());
-        System.out.println(person[2].getFio() + " имеет очков " + person[2].sumPoints());
-        if (person[0].sumPoints() > person[1].sumPoints() && person[0].sumPoints() > person[2].sumPoints()) {
-            System.out.println("Лучший ученик факультета " + person[0]);
-        }
-        else if (person[1].sumPoints() > person[2].sumPoints()) {
-            System.out.println("Лучший ученик факультета " + person[1]);
+    public static void compareStudents(Gryffindor person, Gryffindor person1) {
+        System.out.println(person.getFio() + " имеет очков " + person.sumPoints());
+        System.out.println(person1.getFio() + " имеет очков " + person1.sumPoints());
+        if (person.sumPoints() > person1.sumPoints()) {
+            System.out.println("Лучший ученик на факультете: " + person.getFio());
         } else {
-            System.out.println("Лучший ученик факультета " + person[2]);
+            System.out.println("Лучший ученик на факультете: " + person1.getFio());
         }
+
 
     }
 

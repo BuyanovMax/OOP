@@ -37,32 +37,23 @@ public class Hufflepuff extends Hogwards {
     public void setHonesty(int honesty) {
         this.honesty = honesty;
     }
+
     @Override
     public int sumPoints() {
         int sum = getTransgression() + getPower() + getHonesty() + getIndustriousness() + getLoyalty();
         return sum;
     }
 
-    @Override
-    public void printStudents() {
-        for (int i = 3; i <= 5; i++) {
-            System.out.println(person[i]);
-        }
-    }
 
-    @Override
-    public void compareStudents() {
-        System.out.println(person[3].getFio() + " имеет очков "  + person[3].sumPoints());
-        System.out.println(person[4].getFio() + " имеет очков "  + person[4].sumPoints());
-        System.out.println(person[5].getFio() + " имеет очков "  + person[5].sumPoints());
-        if (person[3].sumPoints() > person[4].sumPoints() && person[3].sumPoints() > person[5].sumPoints()) {
-            System.out.println("Лучший ученик факультета " + person[3]);
-        }
-        else if (person[4].sumPoints() > person[5].sumPoints()) {
-            System.out.println("Лучший ученик факультета " + person[4]);
+    public static void compareStudents(Hufflepuff person, Hufflepuff person1) {
+        System.out.println(person.getFio() + " имеет очков " + person.sumPoints());
+        System.out.println(person1.getFio() + " имеет очков " + person1.sumPoints());
+        if (person.sumPoints() > person1.sumPoints()) {
+            System.out.println("Лучший ученик на факультете: " + person.getFio());
         } else {
-            System.out.println("Лучший ученик факультета " + person[5]);
+            System.out.println("Лучший ученик на факультете: " + person1.getFio());
         }
+
 
     }
 

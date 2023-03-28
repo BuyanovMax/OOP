@@ -52,26 +52,16 @@ public class Ravenclaw extends Hogwards {
         return sum;
     }
 
-    @Override
-    public void printStudents() {
-        for (int i = 6; i <= 8; i++) {
-            System.out.println(person[i]);
-        }
-    }
 
-    @Override
-    public void compareStudents() {
-        System.out.println(person[6].getFio() + " имеет очков "  + person[6].sumPoints());
-        System.out.println(person[7].getFio() + " имеет очков "  + person[7].sumPoints());
-        System.out.println(person[8].getFio() + " имеет очков "  + person[8].sumPoints());
-        if (person[6].sumPoints() > person[7].sumPoints() && person[6].sumPoints() > person[8].sumPoints()) {
-            System.out.println("Лучший ученик факультета " + person[6]);
-        }
-        else if (person[7].sumPoints() > person[8].sumPoints()) {
-            System.out.println("Лучший ученик факультета " + person[7]);
+    public static void compareStudents(Ravenclaw person, Ravenclaw person1) {
+        System.out.println(person.getFio() + " имеет очков " + person.sumPoints());
+        System.out.println(person1.getFio() + " имеет очков " + person1.sumPoints());
+        if (person.sumPoints() > person1.sumPoints()) {
+            System.out.println("Лучший ученик на факультете: " + person.getFio());
         } else {
-            System.out.println("Лучший ученик факультета " + person[8]);
+            System.out.println("Лучший ученик на факультете: " + person1.getFio());
         }
+
 
     }
 
