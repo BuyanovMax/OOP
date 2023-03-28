@@ -37,6 +37,7 @@ public class Hufflepuff extends Hogwards {
     public void setHonesty(int honesty) {
         this.honesty = honesty;
     }
+
     @Override
     public int sumPoints() {
         int sum = getTransgression() + getPower() + getHonesty() + getIndustriousness() + getLoyalty();
@@ -44,8 +45,7 @@ public class Hufflepuff extends Hogwards {
     }
 
 
-
-    public static void compareStudents(Hufflepuff person ,Hufflepuff person1) {
+    public static void compareStudents(Hufflepuff person, Hufflepuff person1) {
         System.out.println(person.getFio() + " имеет очков " + person.sumPoints());
         System.out.println(person1.getFio() + " имеет очков " + person1.sumPoints());
         if (person.sumPoints() > person1.sumPoints()) {

@@ -17,7 +17,7 @@ public class Main {
         System.out.println();
         Slytherin.compareStudents((Slytherin) person[10], (Slytherin) person[9]);
         System.out.println();
-        compareAllStudents(person[0], person[8]);
+        Hogwards.compareAllStudents(person[0], person[8]);
     }
 
     public static void students() {
@@ -43,12 +43,5 @@ public class Main {
         return i;
     }
 
-    public static void compareAllStudents(Hogwards person1, Hogwards person2) {
-        if (person1.power + person1.transgression > person2.power + person2.transgression ){
-            System.out.println(person1.getFio() + " обладает большей силой магии чем " + person2.getFio());
-        } else {
-            System.out.println(person2.getFio() + " обладает большей силой магии чем " + person1.getFio());
-        }
-    }
 
 }

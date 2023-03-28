@@ -44,8 +44,7 @@ public class Gryffindor extends Hogwards {
     }
 
 
-
-    public static void compareStudents(Gryffindor person ,Gryffindor person1) {
+    public static void compareStudents(Gryffindor person, Gryffindor person1) {
         System.out.println(person.getFio() + " имеет очков " + person.sumPoints());
         System.out.println(person1.getFio() + " имеет очков " + person1.sumPoints());
         if (person.sumPoints() > person1.sumPoints()) {

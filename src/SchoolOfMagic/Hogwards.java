@@ -4,7 +4,7 @@ import SchoolOfMagic.*;
 
 import java.util.Random;
 
-public abstract class Hogwards {
+public class Hogwards {
     private String fio;
     public int power;
     public int transgression;
@@ -40,26 +40,28 @@ public abstract class Hogwards {
         this.fio = fio;
     }
 
-    public static int random() {
-        Random random = new Random();
-        int i = random.nextInt(1, 100);
-        return i;
-    }
 
     public String toString() {
         return "Hogwards " +
                 getFio() + ", сила заклинаний: " + getPower() + ", умение трансгрессировать: " + getTransgression();
     }
 
-    public void printStudents(){
+    public void printStudents() {
         System.out.println(toString());
     }
 
-//    public abstract void compareStudents();
 
-    public abstract int sumPoints();
+    public int sumPoints() {
+        return power + transgression;
+    }
 
-
+    public static void compareAllStudents(Hogwards person1, Hogwards person2) {
+        if (person1.sumPoints() > person2.sumPoints()) {
+            System.out.println(person1.getFio() + " обладает большей силой магии чем " + person2.getFio());
+        } else {
+            System.out.println(person2.getFio() + " обладает большей силой магии чем " + person1.getFio());
+        }
+    }
 
 
 }

@@ -64,8 +64,7 @@ public class Slytherin extends Hogwards {
     }
 
 
-
-    public static void compareStudents(Slytherin person ,Slytherin person1) {
+    public static void compareStudents(Slytherin person, Slytherin person1) {
         System.out.println(person.getFio() + " имеет очков " + person.sumPoints());
         System.out.println(person1.getFio() + " имеет очков " + person1.sumPoints());
         if (person.sumPoints() > person1.sumPoints()) {
