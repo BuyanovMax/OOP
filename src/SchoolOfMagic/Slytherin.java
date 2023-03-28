@@ -63,25 +63,17 @@ public class Slytherin extends Hogwards {
         return sum;
     }
 
-    @Override
-    public void printStudents() {
-        for (int i = 9; i <= 11; i++) {
-            System.out.println(person[i]);
-        }
-    }
 
-    @Override
-    public void compareStudents() {
-        System.out.println(person[9].getFio() + " имеет очков " + person[9].sumPoints());
-        System.out.println(person[10].getFio() + " имеет очков " + person[10].sumPoints());
-        System.out.println(person[11].getFio() + " имеет очков " + person[11].sumPoints());
-        if (person[9].sumPoints() > person[10].sumPoints() && person[9].sumPoints() > person[11].sumPoints()) {
-            System.out.println("Лучший ученик факультета " + person[9]);
-        } else if (person[10].sumPoints() > person[11].sumPoints()) {
-            System.out.println("Лучший ученик факультета " + person[10]);
+
+    public static void compareStudents(Slytherin person ,Slytherin person1) {
+        System.out.println(person.getFio() + " имеет очков " + person.sumPoints());
+        System.out.println(person1.getFio() + " имеет очков " + person1.sumPoints());
+        if (person.sumPoints() > person1.sumPoints()) {
+            System.out.println("Лучший ученик на факультете: " + person.getFio());
         } else {
-            System.out.println("Лучший ученик факультета " + person[11]);
+            System.out.println("Лучший ученик на факультете: " + person1.getFio());
         }
+
 
     }
 

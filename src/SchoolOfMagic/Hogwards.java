@@ -5,7 +5,6 @@ import SchoolOfMagic.*;
 import java.util.Random;
 
 public abstract class Hogwards {
-    static Hogwards[] person;
     private String fio;
     public int power;
     public int transgression;
@@ -41,32 +40,6 @@ public abstract class Hogwards {
         this.fio = fio;
     }
 
-
-    public static void main(String[] args) {
-        students();
-        System.out.println(person.toString());
-
-
-    }
-
-    public static void students() {
-        person = new Hogwards[]{
-                new Gryffindor(random(), random(), "Гарри Поттер", random(), random(), random()),
-                new Gryffindor(random(), random(), "Гермиона Грейнджер", random(), random(), random()),
-                new Gryffindor(random(), random(), "Рон Уизли ", random(), random(), random()),
-                new Hufflepuff(random(), random(), "Захария Смит", random(), random(), random()),
-                new Hufflepuff(random(), random(), "Седрик Диггори", random(), random(), random()),
-                new Hufflepuff(random(), random(), "Джастин Финч-Флетчли", random(), random(), random()),
-                new Ravenclaw(random(), random(), "Чжоу Чанг", random(), random(), random(), random()),
-                new Ravenclaw(random(), random(), "Падма Патил", random(), random(), random(), random()),
-                new Ravenclaw(random(), random(), "Маркус Белби", random(), random(), random(), random()),
-                new Slytherin(random(), random(), "Драко Малфой", random(), random(), random(), random(), random()),
-                new Slytherin(random(), random(), "Грэхэм Монтегю", random(), random(), random(), random(), random()),
-                new Slytherin(random(), random(), "Грегори Гойл", random(), random(), random(), random(), random())
-        };
-    }
-
-
     public static int random() {
         Random random = new Random();
         int i = random.nextInt(1, 100);
@@ -74,29 +47,19 @@ public abstract class Hogwards {
     }
 
     public String toString() {
-        return "Hogwards" +
+        return "Hogwards " +
                 getFio() + ", сила заклинаний: " + getPower() + ", умение трансгрессировать: " + getTransgression();
     }
 
-    public abstract void printStudents();
+    public void printStudents(){
+        System.out.println(toString());
+    }
 
-    public abstract void compareStudents();
+//    public abstract void compareStudents();
 
     public abstract int sumPoints();
 
-    public int sumTwoPoints() {
-        int sum = 0;
-        for (int i = 0; i < person.length; i++) {
-            sum = person[i].power + person[i].transgression;
-        }
-        return sum;
-    }
 
-    public void compareAllStudents(Hogwards person1,Hogwards person2) {
-        if (person1.sumTwoPoints() > person2.sumPoints()) {
-            System.out.println(person1.getFio() + " обладает большей силой магии чем " + person2.getFio());
-        } else {
-            System.out.println(person2.getFio() + " обладает большей силой магии чем " + person1.getFio());
-        }
-    }
+
+
 }
